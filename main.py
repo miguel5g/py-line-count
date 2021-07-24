@@ -37,12 +37,8 @@ def countDir(path, show_header=True, log=True):
   files = 0
   folders = 0
 
-  if len(dir_items) <= 0:
-    print('Nehum item neste diretório...')
-    return (0, 0, 0)
-
   # Mostrar o header
-  if show_header and log: print(f'\n{"Lines": <6} - Path\n')
+  if show_header and log and len(dir_items) > 0: print(f'\n{"Lines": <6} - Path\n')
 
   # Fazer um for em cada item dentro do diretório
   for item in dir_items:
